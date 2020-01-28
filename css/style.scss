@@ -544,7 +544,6 @@ section.company{
 
 .case-study{
     padding:50px 0;
-    background-color:transparent;
     .title{
         h4{
             color:$mainColor;
@@ -568,6 +567,7 @@ section.company{
             width:100% !important;
             border-radius:0 !important;
             padding:0 10px;
+            background-color:transparent;
             img{
                 border-radius:0.2rem;
                 margin-bottom:10px;
