@@ -521,6 +521,7 @@ section.company .missions .statistics h1 {
 
 .case-study {
   padding: 50px 0;
+  background-color: transparent;
 }
 .case-study .title h4 {
   color: #00BDAA;
