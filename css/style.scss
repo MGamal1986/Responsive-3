@@ -8,7 +8,8 @@ $subParColor:#999;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
-    height:2500px
+    height:2500px;
+    background-color:#ccc;
 }
 // create placeholder for absolute position with width 100%
 %absPos{

@@ -2,6 +2,7 @@ body {
   font-family: Poppins;
   font-size: 16px;
   height: 2500px;
+  background-color: #ccc;
 }
 
 section.services .slider .slider-item {
