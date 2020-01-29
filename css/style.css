@@ -581,9 +581,25 @@ section.company .missions .statistics h1 {
   -ms-user-select: none;
   user-select: none;
 }
+.choose-us .sec li i {
+  position: relative;
+}
+.choose-us .sec li i:before {
+  font-size: 28px;
+  color: #00BDAA;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.choose-us .sec li span {
+  margin-left: 35px;
+}
 .choose-us .sec .active {
   color: #fff;
   background-color: #00BDAA;
+}
+.choose-us .sec .active i:before {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
