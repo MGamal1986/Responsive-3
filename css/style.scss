@@ -9,7 +9,6 @@ body{
     font-family:$fontFamily;
     font-size:$fontSize;
     height:2500px;
-    background-color:#ccc;
 }
 // create placeholder for absolute position with width 100%
 %absPos{
@@ -17,6 +16,25 @@ body{
     top:0;
     left:0;
     width:100%;
+}
+// create placeholder for standard padding section
+%paddingSection{
+    padding:50px 0;
+}
+// main classes for addresses and sub-paragraph
+.h4Adress{
+    color:$mainColor;
+    font-weight:bold;
+    font-size:$fontSize;
+}
+.h1Address{
+    font-weight:bold;
+    font-size:$fontSize * 2;
+    letter-spacing: 1px;
+}
+.pSubParagraph{
+    color:$subParColor;
+    width:65%;
 }
 // start loader screen
 
@@ -32,7 +50,8 @@ div.loading{
         position: relative;
         top:50%;
         left:50%;
-        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
         span{
             color:$secondColor;
             font-weight:bold;
@@ -143,14 +162,11 @@ header{
             @media screen and (max-width:992px){
                 padding:10px 0 !important;
                 display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
                 -webkit-box-orient: horizontal;
                 -webkit-box-direction: normal;
-                    -ms-flex-flow: row nowrap;
                         flex-flow: row nowrap;
                 -webkit-box-align: start;
-                    -ms-flex-align: start;
                         align-items: flex-start;
 
             }
@@ -194,15 +210,13 @@ header{
                     outline:0 !important;
                     border-color:transparent !important;
                     &:focus,&:active{
-                        -webkit-box-shadow:none;
-                                box-shadow:none;
+                        box-shadow:none;
                         border-color:transparent !important;
                         outline:0 !important;
                     }
                 }
                 @media screen and (max-width:992px){
-                    -ms-flex-item-align:start;
-                        align-self:start
+                    align-self:start
                 } 
             }
         }
@@ -355,12 +369,14 @@ section.consulting{
                 &::-ms-input-placeholder{
                     color:#fff;
                 }
+                &::-moz-placeholder{
+                    color:#fff;
+                }
                 &::placeholder{
                     color:#fff;
                 }
                 &:active,&:focus{
-                    -webkit-box-shadow:none !important;
-                            box-shadow:none !important;
+                    box-shadow:none !important;
                 }
             }
             .select-option{
@@ -386,8 +402,7 @@ section.consulting{
                     -o-appearance: none;
                     appearance: none;
                     &:active,&:focus{
-                        -webkit-box-shadow:none !important;
-                                box-shadow:none !important;
+                        box-shadow:none !important;
                     }
             }
             
@@ -439,8 +454,7 @@ section.consulting{
         }
     }
     .shade{
-        -webkit-box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
-                box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
     }
 }
 // end consulting style
@@ -481,20 +495,8 @@ section.company{
     }
     .missions{
         padding:50px 15px;
-        h4{
-            color:$mainColor;
-            font-weight:bold;
-            font-size: $fontSize - 4;
-        }
-        h1{
-            font-weight: 600;
-            line-height: 1.5;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
         p{
-            color: $subParColor;
-            margin-bottom: 20px;
+            width:100% !important;
         }
         ul.nav{
             li{
@@ -541,23 +543,13 @@ section.company{
 // end company style
 
 // start study style
-
 .case-study{
-    padding:50px 0;
+    @extend %paddingSection;
     .title{
-        h4{
-            color:$mainColor;
-            font-weight:bold;
-            font-size:$fontSize;
-        }
-        h1{
-            font-weight:bold;
-            font-size:$fontSize * 2;
-            letter-spacing: 1px;
-        }
         p{
-            color:$subParColor;
-            width:65%;
+            @media screen and (max-width:768px){
+                width:100%;
+            }
         }
     }
     .sol{
@@ -567,7 +559,6 @@ section.company{
             width:100% !important;
             border-radius:0 !important;
             padding:0 10px;
-            background-color:transparent;
             img{
                 border-radius:0.2rem;
                 margin-bottom:10px;
@@ -580,7 +571,8 @@ section.company{
                     position:absolute;
                     top:-25px;
                     left:50%;
-                    transform:translateX(-50%);
+                    -webkit-transform:translateX(-50%);
+                            transform:translateX(-50%);
                     display:inline-block;
                     background-color: $mainColor;
                     color:#fff;
@@ -601,5 +593,33 @@ section.company{
         }
     }
 }
-
 // end study style
+
+// start service style
+
+.choose-us{
+    @extend %paddingSection;
+    .sec{
+        li{
+            padding:20px 25px;
+            border:1px solid #ccc;
+            margin-bottom:10px;
+            cursor:pointer;
+            font-weight:bold;
+            font-size:$fontSize + 4;
+            -webkit-transition:all 0.2s linear;
+            transition:all 0.2s linear;
+            border-radius: 5px;
+            -webkit-user-select:none;
+               -moz-user-select:none;
+                -ms-user-select:none;
+                    user-select:none;
+        }
+        .active{
+            color:#fff;
+            background-color:$mainColor;
+        }
+    }
+}
+
+// End service style

@@ -30,7 +30,6 @@ $(function(){
         
     }
     $(window).on('scroll',function(){
-        console.log($(this).scrollTop(),$('.company .statistics').offset().top)
         if($(this).scrollTop() >= 1450){
             let el = $('.company .statistics .counter-up');
             el.each(function(){
@@ -41,6 +40,12 @@ $(function(){
             // window.alert("this is fine scroll");
         }
     })
+    // start servive section
+    $('.choose-us .sec > li').on('click',function(){
+        $(this).addClass('active').siblings('li').removeClass('active');
+    })
+
+
 
     // initiate animation using AOS library
     AOS.init({

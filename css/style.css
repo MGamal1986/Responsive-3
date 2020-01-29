@@ -2,7 +2,6 @@ body {
   font-family: Poppins;
   font-size: 16px;
   height: 2500px;
-  background-color: #ccc;
 }
 
 section.services .slider .slider-item {
@@ -10,6 +9,27 @@ section.services .slider .slider-item {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.choose-us, .case-study {
+  padding: 50px 0;
+}
+
+.h4Adress {
+  color: #00BDAA;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.h1Address {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.pSubParagraph {
+  color: #999;
+  width: 65%;
 }
 
 div.loading {
@@ -25,6 +45,7 @@ div.loading .center {
   position: relative;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 div.loading .center span {
@@ -137,14 +158,11 @@ header .bottom .navbar .active {
   header .bottom .navbar {
     padding: 10px 0 !important;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
   }
 }
@@ -190,14 +208,12 @@ header .bottom .navbar form input {
   border-color: transparent !important;
 }
 header .bottom .navbar form input:focus, header .bottom .navbar form input:active {
-  -webkit-box-shadow: none;
   box-shadow: none;
   border-color: transparent !important;
   outline: 0 !important;
 }
 @media screen and (max-width: 992px) {
   header .bottom .navbar form {
-    -ms-flex-item-align: start;
     align-self: start;
   }
 }
@@ -351,11 +367,13 @@ section.consulting .free form input:not([type=submit]):-ms-input-placeholder {
 section.consulting .free form input:not([type=submit])::-ms-input-placeholder {
   color: #fff;
 }
+section.consulting .free form input:not([type=submit])::-moz-placeholder {
+  color: #fff;
+}
 section.consulting .free form input:not([type=submit])::placeholder {
   color: #fff;
 }
 section.consulting .free form input:not([type=submit]):active, section.consulting .free form input:not([type=submit]):focus {
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 section.consulting .free form .select-option {
@@ -383,7 +401,6 @@ section.consulting .free form .select-option select {
   appearance: none;
 }
 section.consulting .free form .select-option select:active, section.consulting .free form .select-option select:focus {
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 section.consulting .free form button {
@@ -432,7 +449,6 @@ section.consulting .agency .category p {
   }
 }
 section.consulting .shade {
-  -webkit-box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -468,20 +484,8 @@ section.company .clients {
 section.company .missions {
   padding: 50px 15px;
 }
-section.company .missions h4 {
-  color: #00BDAA;
-  font-weight: bold;
-  font-size: 12px;
-}
-section.company .missions h1 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
 section.company .missions p {
-  color: #999;
-  margin-bottom: 20px;
+  width: 100% !important;
 }
 section.company .missions ul.nav li a {
   color: #000;
@@ -519,22 +523,10 @@ section.company .missions .statistics h1 {
   margin: 0;
 }
 
-.case-study {
-  padding: 50px 0;
-}
-.case-study .title h4 {
-  color: #00BDAA;
-  font-weight: bold;
-  font-size: 16px;
-}
-.case-study .title h1 {
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: 1px;
-}
-.case-study .title p {
-  color: #999;
-  width: 65%;
+@media screen and (max-width: 768px) {
+  .case-study .title p {
+    width: 100%;
+  }
 }
 .case-study .sol .card {
   border: none !important;
@@ -542,7 +534,6 @@ section.company .missions .statistics h1 {
   width: 100% !important;
   border-radius: 0 !important;
   padding: 0 10px;
-  background-color: transparent;
 }
 .case-study .sol .card img {
   border-radius: 0.2rem;
@@ -557,6 +548,7 @@ section.company .missions .statistics h1 {
   position: absolute;
   top: -25px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   display: inline-block;
   background-color: #00BDAA;
@@ -572,6 +564,26 @@ section.company .missions .statistics h1 {
 .case-study .sol .card .card-body p {
   color: #999;
   text-align: center;
+}
+
+.choose-us .sec li {
+  padding: 20px 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.choose-us .sec .active {
+  color: #fff;
+  background-color: #00BDAA;
 }
 
 /*# sourceMappingURL=style.css.map */
