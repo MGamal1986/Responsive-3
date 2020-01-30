@@ -622,11 +622,12 @@ section.company{
                 font-size: $fontSize + 12;
                 color: #00BDAA;
                 position: absolute;
-                top: -10px;
-                left: 0;
+                top: -7px;
+                left: -19px;
+                opacity:0.6;
             }
             span{
-                margin-left: 35px;;
+                margin-left: 45px;
             }
         }
         .active{
@@ -634,6 +635,7 @@ section.company{
             background-color:$mainColor;
             i:before{
                 color:#fff;
+                opacity:1;
             }
         }
     }
