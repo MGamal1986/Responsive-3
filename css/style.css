@@ -603,5 +603,66 @@ section.company .missions .statistics h1 {
   color: #fff;
   opacity: 1;
 }
+.choose-us .features {
+  position: relative;
+}
+.choose-us .features .feature {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear;
+  z-index: 10;
+}
+.choose-us .features .feature .image {
+  height: 70%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.choose-us .features .feature h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.choose-us .features .feature p {
+  margin: 0;
+}
+.choose-us .features .feature:nth-of-type(1) .image {
+  background: url(../images/case-study/project-1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .feature:nth-of-type(2) .image {
+  background: url(../images/case-study/project-2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .feature:nth-of-type(3) .image {
+  background: url(../images/case-study/project-3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .feature:nth-of-type(4) .image {
+  background: url(../images/case-study/project-4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .feature:nth-of-type(5) .image {
+  background: url(../images/case-study/project-5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .feature:nth-of-type(6) .image {
+  background: url(../images/case-study/project-6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.choose-us .features .show {
+  visibility: visible;
+  opacity: 1;
+  z-index: 20;
+}
 
 /*# sourceMappingURL=style.css.map */

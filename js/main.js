@@ -43,6 +43,14 @@ $(function(){
     // start servive section
     $('.choose-us .sec > li').on('click',function(){
         $(this).addClass('active').siblings('li').removeClass('active');
+        $('.choose-us .feature').each(function(){
+            $(this).removeClass('show')
+        })
+
+        let feat = $(this).data('class');
+        console.log(`.choose-us ${feat}`);
+        $(`.choose-us ${feat}`).addClass('show');
+        
     })
 
 

@@ -21,6 +21,13 @@ body{
 %paddingSection{
     padding:50px 0;
 }
+// create mixin for image background
+@mixin imageBack($src){
+    background:url(#{$src}) no-repeat ;
+    background-size:cover;
+    background-position:center center;
+    
+}
 // main classes for addresses and sub-paragraph
 .h4Adress{
     color:$mainColor;
@@ -639,6 +646,73 @@ section.company{
             }
         }
     }
+    .features{
+        position:relative;
+        .feature{
+            height:100%;
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            visibility: hidden;
+            opacity:0;
+            transition:all 0.5s linear;
+            z-index:10;
+            .image{
+                height:70%;
+                margin-bottom:20px;
+                border-radius:10px;
+            }
+            
+            h4{
+                margin-bottom:20px;
+                font-weight:bold;
+                
+            }
+            p{
+                margin:0;
+            }
+        }
+        .feature:nth-of-type(1){
+            .image{
+                @include imageBack('../images/case-study/project-1.jpg');
+            }
+        }
+        .feature:nth-of-type(2){
+            .image{
+                @include imageBack('../images/case-study/project-2.jpg');
+            }
+        }
+        .feature:nth-of-type(3){
+            .image{
+                @include imageBack('../images/case-study/project-3.jpg');
+            }
+        }
+        .feature:nth-of-type(4){
+            .image{
+                @include imageBack('../images/case-study/project-4.jpg');
+            }
+        }
+        .feature:nth-of-type(5){
+            .image{
+                @include imageBack('../images/case-study/project-5.jpg');
+            }
+        }
+        .feature:nth-of-type(6){
+            .image{
+                @include imageBack('../images/case-study/project-6.jpg');
+            }
+        }
+    
+        .show{
+            visibility: visible;
+            opacity:1;
+            z-index:20;
+        }
+    }
+    
+    
+    
 }
 
 // End service style
