@@ -8,7 +8,7 @@ $subParColor:#999;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
-    height:2500px;
+    height:45000px;
 }
 // create placeholder for absolute position with width 100%
 %absPos{
@@ -606,6 +606,11 @@ section.company{
 
 .choose-us{
     @extend %paddingSection;
+    .no-padding{
+        @media screen and (max-width:768px){
+            padding:0 !important;
+        }
+    }
     .sec{
         li{
             
@@ -636,6 +641,9 @@ section.company{
             span{
                 margin-left: 45px;
             }
+            @media screen and (max-width:768pc){
+                text-align:center;
+            }
         }
         .active{
             color:#fff;
@@ -648,6 +656,9 @@ section.company{
     }
     .features{
         position:relative;
+        @media screen and (max-width:768px){
+            min-height:500px;
+        }
         .feature{
             height:100%;
             position: absolute;
@@ -658,8 +669,11 @@ section.company{
             opacity:0;
             transition:all 0.5s linear;
             z-index:10;
+            @media screen and (max-width:768px){
+                padding:0 15px;
+            }
             .image{
-                height:70%;
+                height:73%;
                 margin-bottom:20px;
                 border-radius:10px;
             }

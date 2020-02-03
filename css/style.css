@@ -1,7 +1,7 @@
 body {
   font-family: Poppins;
   font-size: 16px;
-  height: 2500px;
+  height: 45000px;
 }
 
 section.services .slider .slider-item {
@@ -566,6 +566,11 @@ section.company .missions .statistics h1 {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .choose-us .no-padding {
+    padding: 0 !important;
+  }
+}
 .choose-us .sec li {
   padding: 20px 25px;
   border: 1px solid #ccc;
@@ -595,6 +600,11 @@ section.company .missions .statistics h1 {
 .choose-us .sec li span {
   margin-left: 45px;
 }
+@media screen and (max-width: 768pc) {
+  .choose-us .sec li {
+    text-align: center;
+  }
+}
 .choose-us .sec .active {
   color: #fff;
   background-color: #00BDAA;
@@ -605,6 +615,11 @@ section.company .missions .statistics h1 {
 }
 .choose-us .features {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .choose-us .features {
+    min-height: 500px;
+  }
 }
 .choose-us .features .feature {
   height: 100%;
@@ -617,8 +632,13 @@ section.company .missions .statistics h1 {
   transition: all 0.5s linear;
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  .choose-us .features .feature {
+    padding: 0 15px;
+  }
+}
 .choose-us .features .feature .image {
-  height: 70%;
+  height: 73%;
   margin-bottom: 20px;
   border-radius: 10px;
 }
