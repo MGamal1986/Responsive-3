@@ -145,6 +145,12 @@ header .bottom {
 header .bottom .navbar {
   padding: 0 1rem !important;
 }
+header .bottom .navbar button {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+header .bottom .navbar button span i {
+  color: #fff;
+}
 header .bottom .navbar .active {
   background-color: #F1648F;
 }
@@ -168,8 +174,11 @@ header .bottom .navbar .active {
 }
 @media screen and (max-width: 992px) {
   header .bottom .navbar .navbar-collapse {
-    margin-top: 2.9rem;
-    margin-left: -4.2rem;
+    position: absolute;
+    z-index: 1000;
+    top: 4.2rem;
+    background-color: #00bdaa;
+    width: 100%;
   }
 }
 @media screen and (max-width: 992px) {
