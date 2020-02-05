@@ -1,7 +1,7 @@
 body {
   font-family: Poppins;
   font-size: 16px;
-  height: 45000px;
+  height: 9500px;
 }
 
 section.services .slider .slider-item {
@@ -11,8 +11,8 @@ section.services .slider .slider-item {
   width: 100%;
 }
 
-.choose-us, .case-study {
-  padding: 50px 0;
+section.testimonies, .choose-us, .case-study {
+  padding: 120px 0;
 }
 
 .h4Adress {
@@ -483,6 +483,9 @@ section.guide h1 {
   z-index: 10;
   color: #fff;
 }
+section.guide a {
+  z-index: 10;
+}
 
 section.company .clients {
   background: url("../images/company/about.jpg") no-repeat;
@@ -609,7 +612,7 @@ section.company .missions .statistics h1 {
 .choose-us .sec li span {
   margin-left: 45px;
 }
-@media screen and (max-width: 768pc) {
+@media screen and (max-width: 768px) {
   .choose-us .sec li {
     text-align: center;
   }
@@ -692,6 +695,54 @@ section.company .missions .statistics h1 {
   visibility: visible;
   opacity: 1;
   z-index: 20;
+}
+
+section.guide-2 {
+  position: relative;
+  height: 161px;
+  background: url(../images/bg/bg_1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  section.guide-2 {
+    min-height: 250px;
+  }
+}
+section.guide-2 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(10, 189, 227, 0.8)), to(rgba(26, 188, 156, 0.8)));
+  background-image: linear-gradient(to right, rgba(10, 189, 227, 0.8), rgba(26, 188, 156, 0.8));
+  z-index: 5;
+}
+section.guide-2 h2 {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  font-weight: 600;
+}
+@media screen and (max-width: 992px) {
+  section.guide-2 h2 {
+    font-size: 29px;
+    margin-bottom: 16px;
+  }
+}
+section.guide-2 a {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  color: #fff;
+  background-color: #F1648F;
+  border-radius: 29px;
+  width: 100%;
+  padding: 15px 1px;
+}
+section.guide-2 a:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
