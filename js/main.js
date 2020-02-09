@@ -63,8 +63,8 @@ $(function(){
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:30,
-        autoplay:false,
-        autoplayTimeout:2000,
+        autoplay:true,
+        autoplayTimeout:2500,
         autoplayHoverPause:true,
         dots:true,
         dotsEach:true,
