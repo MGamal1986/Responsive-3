@@ -795,6 +795,9 @@ section.testimonies{
     @extend %paddingSection;
     .owl-carousel{
         margin-top:30px;
+        &>div.owl-stage-outer{
+            padding:20px 0;
+        }
         .item{
             position:relative;
             &:before{
