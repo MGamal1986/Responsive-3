@@ -768,8 +768,8 @@ section.testimonies .owl-carousel .item:before {
   font-weight: normal;
   font-style: normal;
   position: absolute;
-  top: -32px;
-  left: 147px;
+  top: -14%;
+  left: 31%;
   color: #00BDAA;
   font-size: 39px;
 }
