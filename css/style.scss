@@ -9,7 +9,6 @@ $testimonielColor:#FAFAFA;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
-    height:9500px;
 }
 // create placeholder for absolute position with width 100%
 %absPos{
@@ -796,9 +795,6 @@ section.testimonies{
     @extend %paddingSection;
     .owl-carousel{
         margin-top:30px;
-        &>div.owl-stage-outer{
-            overflow:visible;
-        }
         .item{
             position:relative;
             &:before{
