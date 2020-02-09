@@ -68,6 +68,7 @@ $(function(){
         autoplayHoverPause:true,
         dots:true,
         dotsEach:true,
+        center:true,
         responsive:{
             0:{
                 items:1

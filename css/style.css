@@ -754,6 +754,9 @@ section.testimonies .owl-carousel {
 section.testimonies .owl-carousel > div.owl-stage-outer {
   padding: 20px 0;
 }
+section.testimonies .owl-carousel button.active span {
+  background: #00BDAA !important;
+}
 section.testimonies .owl-carousel .item {
   position: relative;
   padding: 15px;

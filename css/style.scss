@@ -798,6 +798,13 @@ section.testimonies{
         &>div.owl-stage-outer{
             padding:20px 0;
         }
+        button{
+            &.active{
+                span{
+                    background:$mainColor !important;
+                }
+            }
+        }
         .item{
             position:relative;
             &:before{
