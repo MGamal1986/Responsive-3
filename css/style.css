@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: Poppins;
   font-size: 16px;
@@ -743,6 +744,56 @@ section.guide-2 a {
 }
 section.guide-2 a:hover {
   color: #fff;
+}
+
+section.testimonies {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+section.testimonies .owl-carousel {
+  margin-top: 30px;
+}
+section.testimonies .owl-carousel > div.owl-stage-outer {
+  overflow: visible;
+}
+section.testimonies .owl-carousel .item {
+  position: relative;
+  padding: 15px;
+  background-color: #FAFAFA;
+}
+section.testimonies .owl-carousel .item:before {
+  content: "";
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  top: -32px;
+  left: 147px;
+  color: #00BDAA;
+  font-size: 39px;
+}
+section.testimonies .owl-carousel .item .portrait {
+  flex-basis: 30%;
+  position: relative;
+}
+section.testimonies .owl-carousel .item .portrait img {
+  border-radius: 50%;
+  width: 70%;
+  position: absolute;
+  top: 2px;
+  left: 20px;
+}
+section.testimonies .owl-carousel .item .content {
+  flex-basis: 70%;
+}
+section.testimonies .owl-carousel .item .content p {
+  color: #999;
+}
+section.testimonies .owl-carousel .item .content h5 {
+  font-weight: normal;
+}
+section.testimonies .owl-carousel .item .content span {
+  color: #00BDAA;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -59,4 +59,25 @@ $(function(){
     AOS.init({
         once:true
     });
+    // start owl carsoul
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:30,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        dots:true,
+        dotsEach:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
 })

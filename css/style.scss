@@ -5,6 +5,7 @@ $secondColor:#F1648F;
 $subPColor:#939191;
 $fontSize:16px;
 $subParColor:#999;
+$testimonielColor:#FAFAFA;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
@@ -793,6 +794,53 @@ section.guide-2{
 // start testimonies styles
 section.testimonies{
     @extend %paddingSection;
+    .owl-carousel{
+        margin-top:30px;
+        &>div.owl-stage-outer{
+            overflow:visible;
+        }
+        .item{
+            position:relative;
+            &:before{
+                content:'\f10d';
+                font-family:'FontAwesome';
+                font-weight:normal;
+                font-style:normal;
+                position:absolute;
+                top: -32px;
+                left: 147px;
+                color:$mainColor;
+                font-size: 39px;
+            }
+            padding:15px;
+            background-color:$testimonielColor;
+            .portrait{
+                flex-basis: 30%;
+                position: relative;
+                img{
+                    border-radius:50%;
+                    width:70%;
+                    position:absolute;
+                    top:2px;
+                    left:20px;
+                }
+            }
+            .content{
+                flex-basis:70%;
+                p{
+                    color:$subParColor;
+                }
+                h5{
+                    font-weight:normal;
+                }
+                span{
+                    color:$mainColor;
+                    text-transform:capitalize;
+                }
+            }
+        }
+    }
+    border-bottom:1px solid rgba(0,0,0,0.2);
 }
 
 // END testimonies styles
