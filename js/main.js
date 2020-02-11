@@ -19,13 +19,9 @@ $(function(){
     
     // toggle active class in nav links
     $('.nav-link').on('click',function(){
-//         $(this).parent('li').parent('ul').children('li').each(function(i,element){
-//             element.children('a').removeClass('active');
-//         });
-//             $(this).addClass('active');
         $('.nav-link').each(function(){
             $(this).removeClass('active');
-        }).
+        });
         $(this).addClass('active');
     });
     
