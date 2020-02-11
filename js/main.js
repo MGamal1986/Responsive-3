@@ -64,7 +64,7 @@ $(function(){
         loop:true,
         margin:30,
         items:1,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:2500,
         autoplayHoverPause:true,
         dots:true,
