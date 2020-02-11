@@ -16,10 +16,15 @@ $(function(){
             $(this).toggleClass('active')
         })
     },4000)
+    
     // toggle active class in nav links
     $('.nav-link').on('click',function(){
-        $(this).addClass('active').parent().chidren().removeClass('active');
+        $(this).parent('li').parent('ul').chidren('li').each(function(i,element){
+            element.children('a').removeClass('active');
+        });
+            $(this).addClass('active');
     });
+    
     // company section toggle actie class with click
     let counterUp = function(el,max,delay){
         let count = 0;
