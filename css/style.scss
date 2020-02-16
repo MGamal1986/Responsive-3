@@ -6,9 +6,11 @@ $subPColor:#939191;
 $fontSize:16px;
 $subParColor:#999;
 $testimonielColor:#FAFAFA;
+$borderColor:#BDFFF8;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
+    height:9500px;
 }
 // create placeholder for absolute position with width 100%
 %absPos{
@@ -26,7 +28,9 @@ body{
     background:url(#{$src}) no-repeat ;
     background-size:cover;
     background-position:center center;
-    
+}
+@mixin easeOut($time:0.5s){
+    transition:all #{$time} ease-out;
 }
 // main classes for addresses and sub-paragraph
 .h4Adress{
@@ -159,7 +163,7 @@ header{
         .navbar{
             padding:0 1rem !important;
             button{
-                border-color:rgba(255,255,255,0.5);
+                border:none;
                 span{
                     i{
                         color:#fff
@@ -850,4 +854,89 @@ section.testimonies{
 }
 
 // END testimonies styles
+// start blog styles
 
+section.blog{
+    @extend %paddingSection;
+    @for $i from 1 through 3{
+        .blogger_#{$i} .image{
+            @include imageBack('../images/blog/image_#{$i}.jpg');
+        }
+    }
+    .blogger_1,.blogger_2,.blogger_3{
+        display:flex;
+        flex-flow:column nowrap;
+        border:5px solid $borderColor;
+        
+        .image{
+            height:300px;
+            position:relative;
+           .date{
+            display:inline-block;
+            text-transform:capitalize;
+            text-align:center;
+            position: absolute;
+            background-color:$secondColor;
+            color:#fff;
+            width:40px;
+            padding:15px 0;
+            bottom:0;
+            left:0;
+            span{
+                display:block;
+                &:nth-of-type(1){
+                    font-weight:bold;
+                    font-size:$fontSize;
+                }
+                &:nth-of-type(2),&:nth-of-type(3){
+                    font-size:$fontSize - 3;
+                }
+            }
+           }
+        }
+        .comment{
+            padding:22px;
+            h5{
+                font-weight:bold;
+                line-height:1.5;
+                margin-bottom:15px;
+            }
+            p{
+                color:$subParColor;
+                margin-bottom:15px;
+            }
+            a{
+                padding:8px 15px;
+                @include easeOut(0.3s);
+                background-color:$mainColor;
+                color:#fff;
+                border-radius:30px;
+                border:1px solid $mainColor;
+                cursor:pointer;
+                margin-right:10%;
+                &:hover{
+                    background-color:transparent;
+                    color:$mainColor;
+                }
+                i{
+                    color:#fff;
+                }
+            }
+            span:nth-of-type(1){
+                color:$mainColor;
+                margin-right:5%;
+            }
+            i{
+                color:#bbb;
+            }
+            span:nth-of-type(2){
+                color:#bbb;
+            }
+        }
+        @media screen and (max-width:992px){
+            margin-bottom:10px;
+        }
+    }
+}
+
+// end blog styles
