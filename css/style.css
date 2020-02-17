@@ -2,6 +2,7 @@
 body {
   font-family: Poppins;
   font-size: 16px;
+  height: 9500px;
 }
 
 section.services .slider .slider-item {
@@ -11,7 +12,7 @@ section.services .slider .slider-item {
   width: 100%;
 }
 
-section.testimonies, .choose-us, .case-study {
+section.blog, section.testimonies, .choose-us, .case-study {
   padding: 120px 0;
 }
 
@@ -796,6 +797,97 @@ section.testimonies .owl-carousel .item .content h5 {
 section.testimonies .owl-carousel .item .content span {
   color: #00BDAA;
   text-transform: capitalize;
+}
+
+section.blog .blogger_1 .image {
+  background: url(../images/blog/image_1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.blog .blogger_2 .image {
+  background: url(../images/blog/image_2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.blog .blogger_3 .image {
+  background: url(../images/blog/image_3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.blog .blogger_1, section.blog .blogger_2, section.blog .blogger_3 {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 5px solid #BDFFF8;
+}
+section.blog .blogger_1 .image, section.blog .blogger_2 .image, section.blog .blogger_3 .image {
+  height: 300px;
+  position: relative;
+}
+section.blog .blogger_1 .image .date, section.blog .blogger_2 .image .date, section.blog .blogger_3 .image .date {
+  display: inline-block;
+  text-transform: capitalize;
+  text-align: center;
+  position: absolute;
+  background-color: #F1648F;
+  color: #fff;
+  width: 40px;
+  padding: 15px 0;
+  bottom: 0;
+  left: 0;
+}
+section.blog .blogger_1 .image .date span, section.blog .blogger_2 .image .date span, section.blog .blogger_3 .image .date span {
+  display: block;
+}
+section.blog .blogger_1 .image .date span:nth-of-type(1), section.blog .blogger_2 .image .date span:nth-of-type(1), section.blog .blogger_3 .image .date span:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 16px;
+}
+section.blog .blogger_1 .image .date span:nth-of-type(2), section.blog .blogger_1 .image .date span:nth-of-type(3), section.blog .blogger_2 .image .date span:nth-of-type(2), section.blog .blogger_2 .image .date span:nth-of-type(3), section.blog .blogger_3 .image .date span:nth-of-type(2), section.blog .blogger_3 .image .date span:nth-of-type(3) {
+  font-size: 13px;
+}
+section.blog .blogger_1 .comment, section.blog .blogger_2 .comment, section.blog .blogger_3 .comment {
+  padding: 22px;
+}
+section.blog .blogger_1 .comment h5, section.blog .blogger_2 .comment h5, section.blog .blogger_3 .comment h5 {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+section.blog .blogger_1 .comment p, section.blog .blogger_2 .comment p, section.blog .blogger_3 .comment p {
+  color: #999;
+  margin-bottom: 15px;
+}
+section.blog .blogger_1 .comment a, section.blog .blogger_2 .comment a, section.blog .blogger_3 .comment a {
+  padding: 8px 15px;
+  transition: all 0.3s ease-out;
+  background-color: #00BDAA;
+  color: #fff;
+  border-radius: 30px;
+  border: 1px solid #00BDAA;
+  cursor: pointer;
+  margin-right: 10%;
+}
+section.blog .blogger_1 .comment a:hover, section.blog .blogger_2 .comment a:hover, section.blog .blogger_3 .comment a:hover {
+  background-color: transparent;
+  color: #00BDAA;
+}
+section.blog .blogger_1 .comment a i, section.blog .blogger_2 .comment a i, section.blog .blogger_3 .comment a i {
+  color: #fff;
+}
+section.blog .blogger_1 .comment span:nth-of-type(1), section.blog .blogger_2 .comment span:nth-of-type(1), section.blog .blogger_3 .comment span:nth-of-type(1) {
+  color: #00BDAA;
+  margin-right: 5%;
+}
+section.blog .blogger_1 .comment i, section.blog .blogger_2 .comment i, section.blog .blogger_3 .comment i {
+  color: #bbb;
+}
+section.blog .blogger_1 .comment span:nth-of-type(2), section.blog .blogger_2 .comment span:nth-of-type(2), section.blog .blogger_3 .comment span:nth-of-type(2) {
+  color: #bbb;
+}
+@media screen and (max-width: 992px) {
+  section.blog .blogger_1, section.blog .blogger_2, section.blog .blogger_3 {
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
