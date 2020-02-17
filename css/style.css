@@ -147,7 +147,7 @@ header .bottom .navbar {
   padding: 0 1rem !important;
 }
 header .bottom .navbar button {
-  border-color: rgba(255, 255, 255, 0.5);
+  border: none;
 }
 header .bottom .navbar button span i {
   color: #fff;
