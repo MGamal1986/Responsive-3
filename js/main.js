@@ -91,5 +91,11 @@ $(function(){
         }
     });
     
-    
+    // add nice scroll
+    $('body').niceScroll({
+        cursorcolor: "#00BDAA",
+        cursorwidth: "12px",
+        zindex:1000,
+        cursorborderradius: "3px"
+    });
 })
