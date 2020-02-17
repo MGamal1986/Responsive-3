@@ -96,7 +96,8 @@ $(function(){
         cursorcolor: "#00BDAA",
         cursorwidth: "12px",
         zindex:1000,
-        cursorborderradius: "3px"
+        cursorborderradius: "3px",
+        horizrailenabled: true
     });
     // adjust spaces in more class in blog section
     // $('.blog .more').each(function(){
