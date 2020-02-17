@@ -97,7 +97,7 @@ $(function(){
         cursorwidth: "12px",
         zindex:1000,
         cursorborderradius: "3px",
-        horizrailenabled: true
+        horizrailenabled: false
     });
     // adjust spaces in more class in blog section
     // $('.blog .more').each(function(){
