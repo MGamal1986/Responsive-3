@@ -98,4 +98,12 @@ $(function(){
         zindex:1000,
         cursorborderradius: "3px"
     });
+    // adjust spaces in more class in blog section
+    // $('.blog .more').each(function(){
+    //     $(this).children(':not(:last-child)').each(function(){
+    //         $(this).css({
+    //             'margin-right' : '1%'
+    //         })
+    //     })
+    // })
 })

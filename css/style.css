@@ -2,7 +2,6 @@
 body {
   font-family: Poppins;
   font-size: 16px;
-  height: 9500px;
 }
 
 section.services .slider .slider-item {
@@ -857,6 +856,11 @@ section.blog .blogger_1 .comment p, section.blog .blogger_2 .comment p, section.
   color: #999;
   margin-bottom: 15px;
 }
+section.blog .blogger_1 .comment .more, section.blog .blogger_2 .comment .more, section.blog .blogger_3 .comment .more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 section.blog .blogger_1 .comment a, section.blog .blogger_2 .comment a, section.blog .blogger_3 .comment a {
   padding: 8px 15px;
   transition: all 0.3s ease-out;
@@ -865,7 +869,6 @@ section.blog .blogger_1 .comment a, section.blog .blogger_2 .comment a, section.
   border-radius: 30px;
   border: 1px solid #00BDAA;
   cursor: pointer;
-  margin-right: 10%;
 }
 section.blog .blogger_1 .comment a:hover, section.blog .blogger_2 .comment a:hover, section.blog .blogger_3 .comment a:hover {
   background-color: transparent;
@@ -876,7 +879,6 @@ section.blog .blogger_1 .comment a i, section.blog .blogger_2 .comment a i, sect
 }
 section.blog .blogger_1 .comment span:nth-of-type(1), section.blog .blogger_2 .comment span:nth-of-type(1), section.blog .blogger_3 .comment span:nth-of-type(1) {
   color: #00BDAA;
-  margin-right: 5%;
 }
 section.blog .blogger_1 .comment i, section.blog .blogger_2 .comment i, section.blog .blogger_3 .comment i {
   color: #bbb;

@@ -10,7 +10,6 @@ $borderColor:#BDFFF8;
 body{
     font-family:$fontFamily;
     font-size:$fontSize;
-    height:9500px;
 }
 // create placeholder for absolute position with width 100%
 %absPos{
@@ -29,8 +28,15 @@ body{
     background-size:cover;
     background-position:center center;
 }
+// mixin for transition ease-out
 @mixin easeOut($time:0.5s){
     transition:all #{$time} ease-out;
+}
+// mixin for display flex
+@mixin disFlex($justify,$align:center){
+    display:flex;
+    justify-content:#{$justify};
+    align-items: #{$align};
 }
 // main classes for addresses and sub-paragraph
 .h4Adress{
@@ -896,6 +902,7 @@ section.blog{
         }
         .comment{
             padding:22px;
+            
             h5{
                 font-weight:bold;
                 line-height:1.5;
@@ -905,6 +912,10 @@ section.blog{
                 color:$subParColor;
                 margin-bottom:15px;
             }
+            .more{
+                @include disFlex(space-between);
+                
+            }
             a{
                 padding:8px 15px;
                 @include easeOut(0.3s);
@@ -913,7 +924,6 @@ section.blog{
                 border-radius:30px;
                 border:1px solid $mainColor;
                 cursor:pointer;
-                margin-right:10%;
                 &:hover{
                     background-color:transparent;
                     color:$mainColor;
@@ -924,7 +934,6 @@ section.blog{
             }
             span:nth-of-type(1){
                 color:$mainColor;
-                margin-right:5%;
             }
             i{
                 color:#bbb;
