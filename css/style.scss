@@ -949,3 +949,32 @@ section.blog{
 }
 
 // end blog styles
+
+// start footer style
+
+footer{
+    @extend %paddingSection;
+    background-color:#000;
+    .questions{
+        color:#fff;
+        h5{
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+        p{
+            margin-bottom:20px;
+            margin-left:15px;
+            position:relative;
+            &.location{
+                color:$subParColor;
+            }
+
+        }
+        
+    }
+    .links{}
+    .blog{}
+    .subscribe{}
+}
+
+// End footer style
