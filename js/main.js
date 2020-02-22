@@ -99,12 +99,6 @@ $(function(){
         cursorborderradius: "3px",
         horizrailenabled: false
     });
-    // adjust spaces in more class in blog section
-    // $('.blog .more').each(function(){
-    //     $(this).children(':not(:last-child)').each(function(){
-    //         $(this).css({
-    //             'margin-right' : '1%'
-    //         })
-    //     })
-    // })
+
+    
 })

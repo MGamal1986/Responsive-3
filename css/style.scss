@@ -18,6 +18,18 @@ body{
     left:0;
     width:100%;
 }
+// create placeholder for icons in footer section
+%icons{
+    display:inline-block;
+    font-family:'FontAwesome';
+    font-weight:normal;
+    font-style:normal;
+    position:absolute;
+    color:#fff;
+    left: -25px;
+    font-size: 20px;
+    top: -5px;
+}
 // create placeholder for standard padding section
 %paddingSection{
     padding:120px 0;
@@ -959,18 +971,44 @@ footer{
         color:#fff;
         h5{
             font-weight:bold;
-            margin-bottom:20px;
+            margin-bottom:30px;
         }
         p{
-            margin-bottom:20px;
-            margin-left:15px;
+            margin-bottom:30px;
+            margin-left:25px;
             position:relative;
             &.location{
                 color:$subParColor;
             }
-
         }
-        
+        p:nth-of-type(1):before{
+            content:'\f041';
+            @extend %icons;
+        }
+        p:nth-of-type(2):before{
+            content:'\f095';
+            @extend %icons;
+        }
+        p:nth-of-type(3):before{
+            content:'\f0e0';
+            @extend %icons;
+        }
+        .icons{
+            span{
+                display:inline-block;
+                width:50px;
+                height:50px;
+                line-height: 52px;;
+                border-radius:50%;
+                background-color:$mainColor;
+                text-align: center;
+                margin-right: 10px;
+            }
+            i{
+                color:#fff;
+                font-size:20px;
+            }
+        }
     }
     .links{}
     .blog{}

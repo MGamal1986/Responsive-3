@@ -11,6 +11,18 @@ section.services .slider .slider-item {
   width: 100%;
 }
 
+footer .questions p:nth-of-type(3):before, footer .questions p:nth-of-type(2):before, footer .questions p:nth-of-type(1):before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  color: #fff;
+  left: -25px;
+  font-size: 20px;
+  top: -5px;
+}
+
 footer, section.blog, section.testimonies, .choose-us, .case-study {
   padding: 120px 0;
 }
@@ -900,15 +912,38 @@ footer .questions {
 }
 footer .questions h5 {
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 footer .questions p {
-  margin-bottom: 20px;
-  margin-left: 15px;
+  margin-bottom: 30px;
+  margin-left: 25px;
   position: relative;
 }
 footer .questions p.location {
   color: #999;
+}
+footer .questions p:nth-of-type(1):before {
+  content: "";
+}
+footer .questions p:nth-of-type(2):before {
+  content: "";
+}
+footer .questions p:nth-of-type(3):before {
+  content: "";
+}
+footer .questions .icons span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 52px;
+  border-radius: 50%;
+  background-color: #00BDAA;
+  text-align: center;
+  margin-right: 10px;
+}
+footer .questions .icons i {
+  color: #fff;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
