@@ -18,6 +18,21 @@ body{
     left:0;
     width:100%;
 }
+// create placeholder for icons in footer section
+%icons_font{
+    font-family:'FontAwesome';
+    font-weight:normal;
+    font-style:normal;
+}
+%icons{
+    display:inline-block;
+    @extend %icons_font;
+    position:absolute;
+    color:#fff;
+    left: -25px;
+    font-size: 20px;
+    top: -5px;
+}
 // create placeholder for standard padding section
 %paddingSection{
     padding:120px 0;
@@ -37,6 +52,10 @@ body{
     display:flex;
     justify-content:#{$justify};
     align-items: #{$align};
+}
+// create mixin for easeOut transition
+@mixin easeOut($time:0.5){
+    transition: all #{$time}s ease-out;
 }
 // main classes for addresses and sub-paragraph
 .h4Adress{
@@ -949,3 +968,152 @@ section.blog{
 }
 
 // end blog styles
+
+// start footer style
+
+footer{
+    @extend %paddingSection;
+    background-color:#000;
+    color:#fff;
+    h5{
+        font-weight:bold;
+        margin-bottom:30px;
+    }
+    .questions{
+        p{
+            margin-bottom:30px;
+            margin-left:25px;
+            position:relative;
+            &.location{
+                color:$subParColor;
+            }
+        }
+        p:nth-of-type(1):before{
+            content:'\f041';
+            @extend %icons;
+        }
+        p:nth-of-type(2):before{
+            content:'\f095';
+            @extend %icons;
+        }
+        p:nth-of-type(3):before{
+            content:'\f0e0';
+            @extend %icons;
+        }
+        .icons{
+            span{
+                display:inline-block;
+                width:50px;
+                height:50px;
+                line-height: 52px;;
+                border-radius:50%;
+                background-color:$mainColor;
+                text-align: center;
+                margin-right: 10px;
+                cursor: pointer;
+                @include easeOut(0.2);
+                &:hover{
+                    border:2px solid $mainColor;
+                    background-color:transparent
+                }
+                &:hover i{
+                    color:$mainColor
+                }
+            }
+            i{
+                @include easeOut(0.2);
+                color:#fff;
+                font-size:20px;
+            }
+        }
+    }
+    .links{
+        li{
+            margin-bottom:5px;
+        }
+        a{
+            color:$subPColor;
+            text-transform:capitalize;
+            position:relative;
+            &::before{
+                content:'\f061';
+                @extend %icons_font;
+                font-size:$fontSize - 5;
+                position: absolute;
+                display:inline-block;
+                left:-13px;
+                top:3px;
+                color:rgba(255,255,255,0.8);
+            }
+            @include easeOut(0.2);
+            &:hover{
+                text-decoration: none;
+                color:#fff;
+            }
+        }
+        
+    }
+    .blog{
+        .content{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom:20px;
+            height:85px;
+            .image_1,.image_2{
+                flex-basis: 25%;
+            }
+            .image_1{
+                @include imageBack('../images/footer/image_1.jpg');
+            }
+            .image_2{
+                @include imageBack('../images/footer/image_2.jpg');
+            }
+            .text-content{
+                flex-basis: 70%;
+                p{
+                    margin-top:5px;
+                    margin-bottom: 0;
+                    @include easeOut(0.2);
+                    cursor: pointer;
+                    &:hover{
+                        color:$mainColor;
+                    }
+                }
+                span{
+                    margin-right:0.5rem;
+                    color:$subPColor;
+                    font-size:$fontSize - 4;
+                    text-transform: capitalize;
+                }
+                i{
+                    color:$subPColor;
+                    margin-right:0.25rem;
+                }
+            }
+        }
+    }
+    .subscribe{
+        a{
+            color:#fff;
+            text-decoration:none;
+            height: 52px;
+            line-height: 38px;
+            cursor:pointer;
+            &:hover{
+                color:#fff;
+                
+            }
+            &:nth-of-type(1){
+                background-color:#1A1A1A;
+            }
+            &:nth-of-type(2){
+                background-color:$mainColor;
+            }
+        }
+    }
+    .copy-right{
+        color:$subPColor;
+    }
+}
+
+// End footer style
