@@ -11,11 +11,14 @@ section.services .slider .slider-item {
   width: 100%;
 }
 
-footer .questions p:nth-of-type(3):before, footer .questions p:nth-of-type(2):before, footer .questions p:nth-of-type(1):before {
-  display: inline-block;
+footer .links a::before, footer .questions p:nth-of-type(3):before, footer .questions p:nth-of-type(2):before, footer .questions p:nth-of-type(1):before {
   font-family: "FontAwesome";
   font-weight: normal;
   font-style: normal;
+}
+
+footer .questions p:nth-of-type(3):before, footer .questions p:nth-of-type(2):before, footer .questions p:nth-of-type(1):before {
+  display: inline-block;
   position: absolute;
   color: #fff;
   left: -25px;
@@ -906,11 +909,9 @@ section.blog .blogger_1 .comment span:nth-of-type(2), section.blog .blogger_2 .c
 
 footer {
   background-color: #000;
-}
-footer .questions {
   color: #fff;
 }
-footer .questions h5 {
+footer h5 {
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -944,6 +945,23 @@ footer .questions .icons span {
 footer .questions .icons i {
   color: #fff;
   font-size: 20px;
+}
+footer .links li {
+  margin-bottom: 5px;
+}
+footer .links a {
+  color: #939191;
+  text-transform: capitalize;
+  position: relative;
+}
+footer .links a::before {
+  content: "";
+  font-size: 11px;
+  position: absolute;
+  display: inline-block;
+  left: -13px;
+  top: 3px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /*# sourceMappingURL=style.css.map */

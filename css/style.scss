@@ -19,11 +19,14 @@ body{
     width:100%;
 }
 // create placeholder for icons in footer section
-%icons{
-    display:inline-block;
+%icons_font{
     font-family:'FontAwesome';
     font-weight:normal;
     font-style:normal;
+}
+%icons{
+    display:inline-block;
+    @extend %icons_font;
     position:absolute;
     color:#fff;
     left: -25px;
@@ -967,12 +970,13 @@ section.blog{
 footer{
     @extend %paddingSection;
     background-color:#000;
+    color:#fff;
+    h5{
+        font-weight:bold;
+        margin-bottom:30px;
+    }
     .questions{
-        color:#fff;
-        h5{
-            font-weight:bold;
-            margin-bottom:30px;
-        }
+        
         p{
             margin-bottom:30px;
             margin-left:25px;
@@ -1010,7 +1014,27 @@ footer{
             }
         }
     }
-    .links{}
+    .links{
+        li{
+            margin-bottom:5px;
+        }
+        a{
+            color:$subPColor;
+            text-transform:capitalize;
+            position:relative;
+            &::before{
+                content:'\f061';
+                @extend %icons_font;
+                font-size:$fontSize - 5;
+                position: absolute;
+                display:inline-block;
+                left:-13px;
+                top:3px;
+                color:rgba(255,255,255,0.8);
+            }
+        }
+        
+    }
     .blog{}
     .subscribe{}
 }
