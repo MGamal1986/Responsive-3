@@ -53,6 +53,10 @@ body{
     justify-content:#{$justify};
     align-items: #{$align};
 }
+// create mixin for easeOut transition
+@mixin easeOut($time:0.5){
+    transition: all #{$time}s ease-out;
+}
 // main classes for addresses and sub-paragraph
 .h4Adress{
     color:$mainColor;
@@ -976,7 +980,6 @@ footer{
         margin-bottom:30px;
     }
     .questions{
-        
         p{
             margin-bottom:30px;
             margin-left:25px;
@@ -1007,8 +1010,18 @@ footer{
                 background-color:$mainColor;
                 text-align: center;
                 margin-right: 10px;
+                cursor: pointer;
+                @include easeOut(0.2);
+                &:hover{
+                    border:2px solid $mainColor;
+                    background-color:transparent
+                }
+                &:hover i{
+                    color:$mainColor
+                }
             }
             i{
+                @include easeOut(0.2);
                 color:#fff;
                 font-size:20px;
             }
@@ -1032,11 +1045,75 @@ footer{
                 top:3px;
                 color:rgba(255,255,255,0.8);
             }
+            @include easeOut(0.2);
+            &:hover{
+                text-decoration: none;
+                color:#fff;
+            }
         }
         
     }
-    .blog{}
-    .subscribe{}
+    .blog{
+        .content{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom:20px;
+            height:85px;
+            .image_1,.image_2{
+                flex-basis: 25%;
+            }
+            .image_1{
+                @include imageBack('../images/footer/image_1.jpg');
+            }
+            .image_2{
+                @include imageBack('../images/footer/image_2.jpg');
+            }
+            .text-content{
+                flex-basis: 70%;
+                p{
+                    margin-top:5px;
+                    margin-bottom: 0;
+                    @include easeOut(0.2);
+                    cursor: pointer;
+                    &:hover{
+                        color:$mainColor;
+                    }
+                }
+                span{
+                    margin-right:0.5rem;
+                    color:$subPColor;
+                    font-size:$fontSize - 4;
+                    text-transform: capitalize;
+                }
+                i{
+                    color:$subPColor;
+                    margin-right:0.25rem;
+                }
+            }
+        }
+    }
+    .subscribe{
+        a{
+            color:#fff;
+            text-decoration:none;
+            height: 52px;
+            line-height: 38px;
+            cursor:pointer;
+            &:hover{
+                color:#fff;
+                
+            }
+            &:nth-of-type(1){
+                background-color:#1A1A1A;
+            }
+            &:nth-of-type(2){
+                background-color:$mainColor;
+            }
+        }
+    }
+    .copy-right{
+        color:$subPColor;
+    }
 }
 
 // End footer style

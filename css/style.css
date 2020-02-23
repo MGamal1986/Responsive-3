@@ -878,7 +878,7 @@ section.blog .blogger_1 .comment .more, section.blog .blogger_2 .comment .more, 
 }
 section.blog .blogger_1 .comment a, section.blog .blogger_2 .comment a, section.blog .blogger_3 .comment a {
   padding: 8px 15px;
-  transition: all 0.3s ease-out;
+  transition: all 0.3ss ease-out;
   background-color: #00BDAA;
   color: #fff;
   border-radius: 30px;
@@ -941,8 +941,18 @@ footer .questions .icons span {
   background-color: #00BDAA;
   text-align: center;
   margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+footer .questions .icons span:hover {
+  border: 2px solid #00BDAA;
+  background-color: transparent;
+}
+footer .questions .icons span:hover i {
+  color: #00BDAA;
 }
 footer .questions .icons i {
+  transition: all 0.2s ease-out;
   color: #fff;
   font-size: 20px;
 }
@@ -953,6 +963,7 @@ footer .links a {
   color: #939191;
   text-transform: capitalize;
   position: relative;
+  transition: all 0.2s ease-out;
 }
 footer .links a::before {
   content: "";
@@ -962,6 +973,70 @@ footer .links a::before {
   left: -13px;
   top: 3px;
   color: rgba(255, 255, 255, 0.8);
+}
+footer .links a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+footer .blog .content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 85px;
+}
+footer .blog .content .image_1, footer .blog .content .image_2 {
+  flex-basis: 25%;
+}
+footer .blog .content .image_1 {
+  background: url(../images/footer/image_1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+footer .blog .content .image_2 {
+  background: url(../images/footer/image_2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+footer .blog .content .text-content {
+  flex-basis: 70%;
+}
+footer .blog .content .text-content p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+footer .blog .content .text-content p:hover {
+  color: #00BDAA;
+}
+footer .blog .content .text-content span {
+  margin-right: 0.5rem;
+  color: #939191;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+footer .blog .content .text-content i {
+  color: #939191;
+  margin-right: 0.25rem;
+}
+footer .subscribe a {
+  color: #fff;
+  text-decoration: none;
+  height: 52px;
+  line-height: 38px;
+  cursor: pointer;
+}
+footer .subscribe a:hover {
+  color: #fff;
+}
+footer .subscribe a:nth-of-type(1) {
+  background-color: #1A1A1A;
+}
+footer .subscribe a:nth-of-type(2) {
+  background-color: #00BDAA;
+}
+footer .copy-right {
+  color: #939191;
 }
 
 /*# sourceMappingURL=style.css.map */
