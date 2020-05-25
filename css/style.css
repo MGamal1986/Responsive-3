@@ -627,6 +627,15 @@ section.company .missions .statistics h1 {
 .choose-us .sec li span {
   margin-left: 45px;
 }
+@media screen and (max-width: 992px) {
+  .choose-us .sec li {
+    padding: 20px 3px;
+  }
+  .choose-us .sec li span {
+    margin-left: 35px;
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 768px) {
   .choose-us .sec li {
     text-align: center;
